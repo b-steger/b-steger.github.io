@@ -1,0 +1,69 @@
+;;� (U+FFFD)? → apt install fonts-opensymbol fonts-font-awesome
+;;© 🆝 +22 🧔, ⚖: ㏄0 = 🚫 / 🎅 = 🎉 + 🍾 + 🎵 & 🎊 ‼
+
+(defun 👋 (👤)
+  (format nil "👋 ~A" 👤))
+(👋 '🌐)
+
+(defclass 🏠 () ((👪🤷 :accessor 👪🤷 :initform '👍)
+                 (🐈   :accessor 🐈   :initform '👎)
+                 (🌳🤷 :accessor 🌳🤷 :initform '👎)))
+
+(defmacro ⚡ (⛳ 🚩)
+  ;;🤓: 👉 #'🐾
+  `(setf ,⛳ ,🚩))
+
+(defmethod 🐾 (🐈 🏠)
+  "🏢🐈🏢 = 😿 → 🚶 → 🏠 + 👪 → 😺"
+  #|🤓: #1=#'setf ⁉ #1# = ⚠ & ⚡ & ⛈ & 🔥 & 🧨 & 💣 & 💥 ‼ → #'⚡
+    🧔: 🤷? 🐱 → 🏠 + 👪‼ … 🤔 → ☕/🍹 & 🗣 🗫
+    🤓: 📆🕞 & 🏢❓
+    🧔: 👍
+    🤓: ␆|#
+  (⚡ (🐈 🏠) 🐈))
+
+(defmethod 🛫 (🏠)
+  "🏢 + 🏫 = 😢 → 🗺   = 🏕 + 🚣 + 🎢 + 🏖 + 🏄 = 😂"
+  (⚡ (👪🤷 🏠) '👎))
+
+(defmethod 🛬 (🏠)
+  "🛌 💤 = 🏠→🏠→🏖→🏠→🏠? → 🏠!"
+  (⚡ (👪🤷 🏠) '👍))
+
+(defun 💦+🕐 (🌱)
+  (⚡ 🌱 '🌳))
+
+(defmethod 🌱 ((🌿 (eql '🌳)) 🏠)
+  "🏠 + 🌳 = 🏡"
+  (⚡ (🌳🤷 🏠) '👍))
+
+(defun 👷 (🏠)
+  (make-instance 🏠))
+
+(defmacro 📝 (📜 🛂 &body 🍱)
+  `(format ,📜 ,🛂 ,@🍱))
+
+(defmethod print-object ((object 🏠) stream)
+  (let ((👪🏠 object)
+        (📜 stream))
+    (📝 📜 (if (eql (🌳🤷 👪🏠) '👍) "🏡" "🏠"))
+    (📝 📜 " + 🐈: ~A" (🐈 👪🏠))
+    (when (eql (🐈 👪🏠) '👎)
+      (📝 📜 " (😿)"))
+    (when (eql (👪🤷 👪🏠) '👍)
+      (📝 📜 " + 👪"))
+    (when (and (eql (🌳🤷 👪🏠) '👍)
+               (not (eql (🐈 👪🏠) '👎))
+               (eql (👪🤷 👪🏠) '👍))
+      (📝 📜 " → 👌"))))
+
+(let ((🐈 '🐱)
+      (🌿 (💦+🕐 '🌱))
+      (👪🏠 (👷 '🏠)))
+  (🛫 👪🏠)
+  (🛬 👪🏠)
+  (🌱 🌿 👪🏠)
+  (🐾 🐈 👪🏠)
+  👪🏠)
+;;=> 🏡 + 🐈: 🐱 + 👪 → 👌
+
